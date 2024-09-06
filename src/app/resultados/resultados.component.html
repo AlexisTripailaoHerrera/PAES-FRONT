@@ -1,6 +1,6 @@
 <!-- resultados.component.html -->
-<div class="container-fluid h-100 d-flex justify-content-center align-items-center">
-  <div class="card p-4">
+<div class="container-fluid h-100 d-flex justify-content-center align-items-center mt-md-5">
+  <div class="card mx-auto align-items-center">
     <div class="card-header">
       <h2 class="card-title">Resultados</h2>
     </div>
@@ -9,6 +9,9 @@
       <p>Respuestas Incorrectas: {{ resultados[0].respuestasIncorrectas }}</p>
       <p>Respuestas Nulas: {{ resultados[0].respuestasNulas }}</p>
     </div>
-    <button class="btn btn-success" (click)="volverHome()">Home</button>
+    <div class="card-footer">
+      <button *ngIf="!modoRevision" class="btn btn-primary" (click)="volverHome()">Home</button>
+      <button *ngIf="modoRevision" class="btn btn-primary" (click)="volverPrueba()">Volver</button>
+    </div>
   </div>
 </div>

@@ -1,13 +1,13 @@
-<div>
-  <H1>Selecciona una prueba</H1>
-  <div>
-    <nav>
-      <span>
-        <a routerLink="/matematica">Matemática</a>
-      </span>
-      <span>
-        <a routerLink="/lenguaje">Lenguaje</a>
-      </span>
-    </nav>
+<div class="container-fluid h-100 d-flex justify-content-center align-items-center mt-md-5">
+  <div class="card mx-auto align-items-center">
+    <div class="card-header">
+      <H2 class="card-title">Selecciona una prueba</H2>
+    </div>
+    <div class="card-body">
+      <div class="btn-group-vertical">
+        <button (click)="initMatematica()" type="button" class="btn btn-primary mb-2">Matemática</button>
+        <button (click)="initLenguaje()" type="button" class="btn btn-danger mb-2" disabled>Lenguaje</button>
+      </div>
+    </div>
   </div>
 </div>
