@@ -43,6 +43,8 @@ export class PreguntasMatematicasService {
 
   private resultados: Resultados[] = [{ respuestasCorrectas: 0, respuestasIncorrectas: 0, respuestasNulas: 0 }];
 
+  private modo: boolean;
+
   constructor() { }
 
   setResultados(resultados: Resultados[]) {
@@ -51,5 +53,13 @@ export class PreguntasMatematicasService {
 
   getResultados(): Resultados[] {
     return this.resultados;
+  }
+
+  setModo(modo: boolean) {
+    this.modo = modo;
+  }
+
+  getModo() {
+    return this.modo;
   }
 }

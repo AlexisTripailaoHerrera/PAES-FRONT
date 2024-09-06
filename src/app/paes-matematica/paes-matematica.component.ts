@@ -50,7 +50,7 @@ export class PaesMatematicaComponent implements OnInit {
     this.preguntaActual = index;
   }
 
-  revisar() {
+  revisar(modoRevision: boolean) {
     const resultado = this.resultados[0];
     this.preguntas.forEach(pregunta => {
       const respuestaCorrecta = this.respuestasCorrectas.find(resp => resp.id === pregunta.id);
@@ -73,9 +73,16 @@ export class PaesMatematicaComponent implements OnInit {
 
     });
     this.preguntasMatematicasService.setResultados(this.resultados);
-    this.preguntas.forEach(pregunta => {
-      pregunta.respuestaSeleccionada = undefined;
-    });
+
+    if (!modoRevision) {
+      this.preguntas.forEach(pregunta => {
+        pregunta.respuestaSeleccionada = undefined;
+      });
+      this.preguntasMatematicasService.setModo(false);
+    } else {
+      this.preguntasMatematicasService.setModo(true);
+    }
+
     this.router.navigate(['/resultados']);
   }
 

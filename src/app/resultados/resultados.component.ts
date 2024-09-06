@@ -10,15 +10,21 @@ import {Router} from '@angular/router';
 })
 export class ResultadosComponent implements OnInit {
   resultados: Resultados[] = [];
+  modoRevision: boolean;
   constructor( private preguntasMatematicaService: PreguntasMatematicasService,
                private router: Router) { }
 
   ngOnInit() {
     this.resultados = this.preguntasMatematicaService.getResultados();
+    this.modoRevision = this.preguntasMatematicaService.getModo();
   }
 
   volverHome() {
     this.router.navigate(['/home']);
+  }
+
+  volverPrueba() {
+    this.router.navigate(['/matematica']);
   }
 
 }

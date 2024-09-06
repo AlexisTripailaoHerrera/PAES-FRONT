@@ -48,6 +48,9 @@
 
   <!-- Botón para revisar -->
   <div class="text-center">
-    <button class="btn btn-success" (click)="revisar()">Revisar</button>
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-primary me-2" (click)="revisar(true)">Revisar</button>
+      <button type="button" class="btn btn-primary me-2" (click)="revisar(false)">Finalizar</button>
+    </div>
   </div>
 </div>
