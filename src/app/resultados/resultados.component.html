@@ -1,0 +1,14 @@
+<!-- resultados.component.html -->
+<div class="container-fluid h-100 d-flex justify-content-center align-items-center">
+  <div class="card p-4">
+    <div class="card-header">
+      <h2 class="card-title">Resultados</h2>
+    </div>
+    <div class="card-body">
+      <p>Respuestas Correctas: {{ resultados[0].respuestasCorrectas }}</p>
+      <p>Respuestas Incorrectas: {{ resultados[0].respuestasIncorrectas }}</p>
+      <p>Respuestas Nulas: {{ resultados[0].respuestasNulas }}</p>
+    </div>
+    <button class="btn btn-success" (click)="volverHome()">Home</button>
+  </div>
+</div>
