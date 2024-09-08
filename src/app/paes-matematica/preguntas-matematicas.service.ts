@@ -11,38 +11,33 @@ export class PreguntasMatematicasService {
   public preguntasMatematicas: PreguntasModel[] = [
     {
       id: 1,
-      texto: 'En una industria hay un estanque de acumulación de agua con forma de\n' +
-          'cilindro recto, cuyas medidas del radio y altura son 2 m y 4 m, respectivamente.\n' +
-          'El consumo de agua diario en la industria es del 50 % de la capacidad total\n' +
-          'del estanque.\n' +
-          '¿Cuántos metros cúbicos de agua aproximadamente se consumen diariamente en\n' +
-          'la industria si se considera aproximado a 3?',
-      opciones: ['6', '12', '24', '96']
+      texto: 'assets/img1.jpg',
+      opciones: ['A', 'B', 'C', 'D']
     },
     {
       id: 2,
-      texto: '¿Cuál es el río más largo del mundo?',
-      opciones: ['Amazonas', 'Nilo', 'Yangtsé', 'Danubio']
+      texto: '¿Cuántos números enteros positivos son mayores o iguales que -4 y menores que 3?',
+      opciones: ['2', '3', '4', '6']
     },
     {
       id: 3,
-      texto: '¿Quién pintó la Mona Lisa?',
-      opciones: ['Van Gogh', 'Picasso', 'Da Vinci', 'Rembrandt']
+      texto: '¿Cuál es el resultado de (3/8:-6/16)-8/3?',
+      opciones: ['-11/3', '-3', '11/3', '3']
     }
   ];
 
   public respuestasCorrectasMatematicas: RespuestasModel[] = [
     {
       id: 1,
-      respuestaCorrecta: 'París'
+      respuestaCorrecta: '-13'
     },
     {
       id: 2,
-      respuestaCorrecta: 'Amazonas'
+      respuestaCorrecta: '2'
     },
     {
       id: 3,
-      respuestaCorrecta: 'Da Vinci'
+      respuestaCorrecta: '-11/3'
     }
   ];
 
