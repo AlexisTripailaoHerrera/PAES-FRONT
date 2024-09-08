@@ -11,33 +11,33 @@ export class PreguntasMatematicasService {
   public preguntasMatematicas: PreguntasModel[] = [
     {
       id: 1,
-      texto: 'assets/img1.jpg',
-      opciones: ['A', 'B', 'C', 'D']
+      texto: '¿Cuál es la capital de Francia?',
+      opciones: ['Berlín', 'Madrid', 'París', 'Londres']
     },
     {
       id: 2,
-      texto: '¿Cuántos números enteros positivos son mayores o iguales que -4 y menores que 3?',
-      opciones: ['2', '3', '4', '6']
+      texto: '¿Cuál es el río más largo del mundo?',
+      opciones: ['Amazonas', 'Nilo', 'Yangtsé', 'Danubio']
     },
     {
       id: 3,
-      texto: '¿Cuál es el resultado de (3/8:-6/16)-8/3?',
-      opciones: ['-11/3', '-3', '11/3', '3']
+      texto: '¿Quién pintó la Mona Lisa?',
+      opciones: ['Van Gogh', 'Picasso', 'Da Vinci', 'Rembrandt']
     }
   ];
 
   public respuestasCorrectasMatematicas: RespuestasModel[] = [
     {
       id: 1,
-      respuestaCorrecta: '-13'
+      respuestaCorrecta: 'París'
     },
     {
       id: 2,
-      respuestaCorrecta: '2'
+      respuestaCorrecta: 'Amazonas'
     },
     {
       id: 3,
-      respuestaCorrecta: '-11/3'
+      respuestaCorrecta: 'Da Vinci'
     }
   ];
 
