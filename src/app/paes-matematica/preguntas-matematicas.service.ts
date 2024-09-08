@@ -48,7 +48,7 @@ export class PreguntasMatematicasService {
 
   private modo: boolean;
 
-  private apiUrl = 'http://18.231.219.27:8081/users/crear';
+  private apiUrl = 'https://18.231.219.27:8081/users/crear';
 
   constructor(private http: HttpClient) { }
 
