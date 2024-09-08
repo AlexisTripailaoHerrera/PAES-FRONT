@@ -11,8 +11,13 @@ export class PreguntasMatematicasService {
   public preguntasMatematicas: PreguntasModel[] = [
     {
       id: 1,
-      texto: '¿Cuál es la capital de Francia?',
-      opciones: ['Berlín', 'Madrid', 'París', 'Londres']
+      texto: 'En una industria hay un estanque de acumulación de agua con forma de\n' +
+          'cilindro recto, cuyas medidas del radio y altura son 2 m y 4 m, respectivamente.\n' +
+          'El consumo de agua diario en la industria es del 50 % de la capacidad total\n' +
+          'del estanque.\n' +
+          '¿Cuántos metros cúbicos de agua aproximadamente se consumen diariamente en\n' +
+          'la industria si se considera aproximado a 3?',
+      opciones: ['6', '12', '24', '96']
     },
     {
       id: 2,
