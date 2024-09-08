@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import {PreguntasModel} from '../common/preguntas-model';
 import {RespuestasModel} from '../common/respuestas-model';
 import {Resultados} from '../common/resultados-model';
+import {HttpClient} from '@angular/common/http';
+import {UsersVO} from '../common/users-model';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +48,9 @@ export class PreguntasMatematicasService {
 
   private modo: boolean;
 
-  constructor() { }
+  private apiUrl = 'http://18.231.219.27:8081/users/crear';
+
+  constructor(private http: HttpClient) { }
 
   setResultados(resultados: Resultados[]) {
     this.resultados = resultados;
@@ -61,5 +66,11 @@ export class PreguntasMatematicasService {
 
   getModo() {
     return this.modo;
+  }
+
+  crearUsuario(usersVO: UsersVO): Observable<UsersVO> {
+    return this.http.post<UsersVO>(this.apiUrl, usersVO, {
+      headers: {'Content-Type': 'application/json'}
+    });
   }
 }

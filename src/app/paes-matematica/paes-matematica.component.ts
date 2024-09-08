@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PreguntasMatematicasService} from './preguntas-matematicas.service';
 import {Resultados} from '../common/resultados-model';
 import {Router} from '@angular/router';
+import {UsersVO} from '../common/users-model';
 
 @Component({
   selector: 'app-paes-matematica',
@@ -84,6 +85,20 @@ export class PaesMatematicaComponent implements OnInit {
     }
 
     this.router.navigate(['/resultados']);
+  }
+
+  guardar() {
+    const newUser: UsersVO = {
+      username: 'username',
+      contrasena: '12345',
+      tipoUsuario: 'normal',
+      activo: true
+    };
+    this.preguntasMatematicasService.crearUsuario(newUser).subscribe(response => {
+      console.log('Usuario creado', response);
+    }, error => {
+      console.error('Error al crear usuario', error);
+    });
   }
 
 }
