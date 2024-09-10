@@ -14,33 +14,15 @@ export class PreguntasMatematicasService {
   public preguntasMatematicas: PreguntasModel[] = [
     {
       id: 1,
-      texto: '¿Cuál es la capital de Francia?',
-      opciones: ['Berlín', 'Madrid', 'París', 'Londres']
-    },
-    {
-      id: 2,
-      texto: '¿Cuál es el río más largo del mundo?',
-      opciones: ['Amazonas', 'Nilo', 'Yangtsé', 'Danubio']
-    },
-    {
-      id: 3,
-      texto: '¿Quién pintó la Mona Lisa?',
-      opciones: ['Van Gogh', 'Picasso', 'Da Vinci', 'Rembrandt']
+      img: 'assets/matematica/mate1.jpg',
+      opciones: ['A', 'B', 'C', 'D']
     }
   ];
 
   public respuestasCorrectasMatematicas: RespuestasModel[] = [
     {
       id: 1,
-      respuestaCorrecta: 'París'
-    },
-    {
-      id: 2,
-      respuestaCorrecta: 'Amazonas'
-    },
-    {
-      id: 3,
-      respuestaCorrecta: 'Da Vinci'
+      respuestaCorrecta: 'C'
     }
   ];
 
@@ -48,7 +30,7 @@ export class PreguntasMatematicasService {
 
   private modo: boolean;
 
-  private apiUrl = 'https://18.231.219.27:443/users/crear';
+  private apiUrl = 'http://18.231.219.27:8081/users/crear';
 
   constructor(private http: HttpClient) { }
 
