@@ -1,6 +1,6 @@
 export interface PreguntasModel {
   id: number;
-  texto: string;
+  img: string;
   opciones: string[];
   respuestaSeleccionada?: string;
 }

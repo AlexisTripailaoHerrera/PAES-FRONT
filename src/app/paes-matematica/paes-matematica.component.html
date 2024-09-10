@@ -1,10 +1,9 @@
 <div class="container mt-4">
+  <div class="card p-4 mb-4">
+    <img [src]="preguntas[preguntaActual].img">
+  </div>
   <!-- Mostrar la pregunta actual -->
   <div class="card p-4 mb-4">
-    <div class="card-header">
-      <h2 class="card-title">{{ preguntas[preguntaActual].texto }}</h2>
-    </div>
-
     <!-- Mostrar las opciones de respuesta -->
     <ul class="list-group">
       <li *ngFor="let opcion of preguntas[preguntaActual].opciones" class="list-group-item">
@@ -51,12 +50,6 @@
     <div class="btn-group" role="group">
       <button type="button" class="btn btn-primary me-2" (click)="revisar(true)">Revisar</button>
       <button type="button" class="btn btn-primary me-2" (click)="revisar(false)">Finalizar</button>
-    </div>
-  </div>
-
-  <div class="text-center">
-    <div>
-      <button (click)="guardar()">guardar</button>
     </div>
   </div>
 
