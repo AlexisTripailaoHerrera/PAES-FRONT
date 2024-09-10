@@ -15,6 +15,8 @@ export class PaesMatematicaComponent implements OnInit {
   private respuestasCorrectas: any[] = [];
   public resultados: Resultados[] = [{respuestasCorrectas: 0, respuestasIncorrectas: 0, respuestasNulas: 0}];
   public preguntaActual = 0;
+  public showModal = false;
+  public imageUrl: string | null = null;
 
   constructor(private preguntasMatematicasService: PreguntasMatematicasService,
               private router: Router) { }
@@ -99,6 +101,15 @@ export class PaesMatematicaComponent implements OnInit {
     }, error => {
       console.error('Error al crear usuario', error);
     });
+  }
+
+  verImagen() {
+    this.imageUrl = this.preguntas[this.preguntaActual].img;
+    this.showModal = true;
+  }
+
+  cerrarModal() {
+    this.showModal = false;
   }
 
 }

@@ -8,6 +8,8 @@ import { PaesMatematicaComponent } from './paes-matematica/paes-matematica.compo
 import { PaesLenguajeComponent } from './paes-lenguaje/paes-lenguaje.component';
 import { ResultadosComponent } from './resultados/resultados.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ModalPreguntasComponent } from './modal-preguntas/modal-preguntas.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     PaesMatematicaComponent,
     PaesLenguajeComponent,
-    ResultadosComponent
+    ResultadosComponent,
+    ModalPreguntasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
