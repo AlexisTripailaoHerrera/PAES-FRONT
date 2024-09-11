@@ -89,7 +89,7 @@ export class PaesMatematicaComponent implements OnInit {
 
   guardar() {
     const newUser: UsersVO = {
-      username: 'username',
+      username: 'vicente',
       contrasena: '12345',
       tipoUsuario: 'normal',
       activo: true
