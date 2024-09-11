@@ -30,7 +30,7 @@ export class PreguntasMatematicasService {
 
   private modo: boolean;
 
-  private apiUrl = 'http://18.231.219.27:8081/users/crear';
+  private apiUrl = 'https://back-paes.onrender.com';
 
   constructor(private http: HttpClient) { }
 
@@ -51,7 +51,7 @@ export class PreguntasMatematicasService {
   }
 
   crearUsuario(usersVO: UsersVO): Observable<UsersVO> {
-    return this.http.post<UsersVO>(this.apiUrl, usersVO, {
+    return this.http.post<UsersVO>(this.apiUrl + '/users/crear', usersVO, {
       headers: {'Content-Type': 'application/json'}
     });
   }
