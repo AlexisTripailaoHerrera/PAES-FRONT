@@ -14,7 +14,27 @@ export class PreguntasMatematicasService {
   public preguntasMatematicas: PreguntasModel[] = [
     {
       id: 1,
-      img: 'assets/matematica/mate1.jpg',
+      imgSrc: 'mate1.jpg',
+      opciones: ['A', 'B', 'C', 'D']
+    },
+    {
+      id: 2,
+      imgSrc: 'mate2.jpg',
+      opciones: ['A', 'B', 'C', 'D']
+    },
+    {
+      id: 3,
+      imgSrc: 'mate3.jpg',
+      opciones: ['A', 'B', 'C', 'D']
+    },
+    {
+      id: 4,
+      imgSrc: 'mate4.jpg',
+      opciones: ['A', 'B', 'C', 'D']
+    },
+    {
+      id: 5,
+      imgSrc: 'mate5.jpg',
       opciones: ['A', 'B', 'C', 'D']
     }
   ];
@@ -22,13 +42,31 @@ export class PreguntasMatematicasService {
   public respuestasCorrectasMatematicas: RespuestasModel[] = [
     {
       id: 1,
-      respuestaCorrecta: 'C'
+      respuestaCorrecta: 'B'
+    },
+    {
+      id: 2,
+      respuestaCorrecta: 'A'
+    },
+    {
+      id: 3,
+      respuestaCorrecta: 'A'
+    },
+    {
+      id: 4,
+      respuestaCorrecta: 'B'
+    },
+    {
+      id: 5,
+      respuestaCorrecta: 'D'
     }
   ];
 
   private resultados: Resultados[] = [{ respuestasCorrectas: 0, respuestasIncorrectas: 0, respuestasNulas: 0 }];
 
   private modo: boolean;
+
+  private preguntaActualIndex  = 0;
 
   private apiUrl = 'https://back-paes.onrender.com';
 
@@ -54,5 +92,14 @@ export class PreguntasMatematicasService {
     return this.http.post<UsersVO>(this.apiUrl + '/users/crear', usersVO, {
       headers: {'Content-Type': 'application/json'}
     });
+  }
+
+  // Métodos para gestionar la pregunta actual
+  setPreguntaActual(index: number) {
+    this.preguntaActualIndex = index;
+  }
+
+  getPreguntaActual(): number {
+    return this.preguntaActualIndex;
   }
 }

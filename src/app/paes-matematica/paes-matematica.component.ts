@@ -22,6 +22,7 @@ export class PaesMatematicaComponent implements OnInit {
   ngOnInit() {
     this.preguntas = this.preguntasMatematicasService.preguntasMatematicas;
     this.respuestasCorrectas = this.preguntasMatematicasService.respuestasCorrectasMatematicas;
+    this.preguntaActual = this.preguntasMatematicasService.getPreguntaActual();
   }
 
   // Método para avanzar a la siguiente pregunta
@@ -74,6 +75,7 @@ export class PaesMatematicaComponent implements OnInit {
 
     });
     this.preguntasMatematicasService.setResultados(this.resultados);
+    this.preguntasMatematicasService.setPreguntaActual(this.preguntaActual);
 
     if (!modoRevision) {
       this.preguntas.forEach(pregunta => {
