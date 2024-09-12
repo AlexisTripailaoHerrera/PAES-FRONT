@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import {PreguntasModel} from '../common/preguntas-model';
-import {RespuestasModel} from '../common/respuestas-model';
-import {Resultados} from '../common/resultados-model';
+import {PreguntasModel} from '../common/model/preguntas-model';
+import {RespuestasModel} from '../common/model/respuestas-model';
+import {Resultados} from '../common/model/resultados-model';
 import {HttpClient} from '@angular/common/http';
-import {UsersVO} from '../common/users-model';
+import {UsersVO} from '../common/model/users-model';
 import {Observable} from 'rxjs';
 
 @Injectable({
