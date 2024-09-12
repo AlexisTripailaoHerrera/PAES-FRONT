@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {PreguntasMatematicasService} from './preguntas-matematicas.service';
-import {Resultados} from '../common/resultados-model';
+import {Resultados} from '../common/model/resultados-model';
 import {Router} from '@angular/router';
-import {UsersVO} from '../common/users-model';
+import {UsersVO} from '../common/model/users-model';
 
 @Component({
   selector: 'app-paes-matematica',

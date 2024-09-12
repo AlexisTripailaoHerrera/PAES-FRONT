@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Resultados} from '../common/resultados-model';
+import {Resultados} from '../common/model/resultados-model';
 import {PreguntasMatematicasService} from '../paes-matematica/preguntas-matematicas.service';
 import {Router} from '@angular/router';
 
