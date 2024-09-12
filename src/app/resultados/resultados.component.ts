@@ -20,6 +20,7 @@ export class ResultadosComponent implements OnInit {
   }
 
   volverHome() {
+    this.preguntasMatematicaService.setPreguntaActual(0);
     this.router.navigate(['/home']);
   }
 
